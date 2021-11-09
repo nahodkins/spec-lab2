@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public enum TrafficLightsColor {
 
     RED("red"),

@@ -11,9 +11,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print(GET_USD_VALUE_MSG);
         double usdValue = scanner.nextDouble();
-        CurrencyCalculator currencyCalculator = new CurrencyCalculator(usdValue);
-        System.out.printf((UAH_VALUE_MSG_TEMPLATE) + "%n", currencyCalculator.getUahValue());
-        System.out.printf((RUB_VALUE_MSG_TEMPLATE) + "%n", currencyCalculator.getRubValue());
-        System.out.printf((EUR_VALUE_MSG_TEMPLATE) + "%n", currencyCalculator.getEurValue());
+        System.out.printf((UAH_VALUE_MSG_TEMPLATE) + "%n", CurrencyCalculator.calculateUah(usdValue));
+        System.out.printf((RUB_VALUE_MSG_TEMPLATE) + "%n", CurrencyCalculator.calculateRub(usdValue));
+        System.out.printf((EUR_VALUE_MSG_TEMPLATE) + "%n", CurrencyCalculator.calculateEur(usdValue));
     }
 }
